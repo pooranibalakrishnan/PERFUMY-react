@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perfumy — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Perfumy</h1>
+      </div>
+
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        ☰
+      </button>
+
+      <nav id="siteNav" class="site-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Find your signature scent</h2>
+          <p>Hand-picked fragrances for every mood. Light. Bold. Timeless.</p>
+          <a href="#products" class="btn">Shop Now</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- decorative -->
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container products-section">
+      <h3>Featured Perfumes</h3>
+      <div class="products-grid">
+        <article class="product-card" data-name="Rose Glow" data-price="29.99" data-desc="Soft rose with a hint of citrus.">
+          <div class="product-image">RG</div>
+          <h4>Rose Glow</h4>
+          <p class="price">₹29.99</p>
+          <button class="btn btn-outline view-btn">View</button>
+          <button class="btn add-btn">Add to cart</button>
+        </article>
+
+        <article class="product-card" data-name="Cedar Night" data-price="34.50" data-desc="Warm cedar and amber base for evening wear.">
+          <div class="product-image">CN</div>
+          <h4>Cedar Night</h4>
+          <p class="price">₹34.50</p>
+          <button class="btn btn-outline view-btn">View</button>
+          <button class="btn add-btn">Add to cart</button>
+        </article>
+
+        <article class="product-card" data-name="Ocean Mist" data-price="24.00" data-desc="Fresh aquatic notes for daily freshness.">
+          <div class="product-image">OM</div>
+          <h4>Ocean Mist</h4>
+          <p class="price">₹24.00</p>
+          <button class="btn btn-outline view-btn">View</button>
+          <button class="btn add-btn">Add to cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About Perfumy</h3>
+      <p>We craft small-batch perfumes using high-quality ingredients. Designed with love and tested for longevity.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h3>Contact</h3>
+      <form id="contactForm" class="contact-form" action="#" onsubmit="return false;">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <h4 id="modalTitle"></h4>
+      <p id="modalDesc"></p>
+      <p id="modalPrice" class="modal-price"></p>
+      <button id="modalAdd" class="btn">Add to cart</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Perfumy — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
